@@ -1,42 +1,28 @@
+# Quick Start - Project With Laravel 8.x and AdminLTE 3 (feat. Docker)
+[Cursos de Laravel  - PT-BR](https://academy.especializati.com.br/buscar/laravel)
 
-# Setup Docker Para Projetos Laravel
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
-
-### Passo a passo
-Clone Repositório
+### Step by step
+Clone this Repository
 ```sh
-git clone https://github.com/especializati/setup-docker-laravel.git
+git clone https://github.com/especializati/quick-start-laravel-8-and-adminlte4.git my-project
 ```
 
-
-Clone os Arquivos do Laravel
+Create the .env file
 ```sh
-git clone https://github.com/laravel/laravel.git example-project
-```
-
-
-Copie os arquivos docker-compose.yml, Dockerfile e o diretório docker/ para o seu projeto
-```sh
-cp -r setup-docker-laravel/* example-project/
-```
-
-
-Crie o Arquivo .env
-```sh
-cd example-project/
+cd my-project/
 cp .env.example .env
 ```
 
 
-Atualizar as variáveis de ambiente do arquivo .env
+Update environment variables in .env
 ```dosini
-APP_NAME=EspecializaTi
-APP_URL=http://localhost:8989
+APP_NAME="Name Your Project"
+APP_URL=http://localhost:8080
 
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=nome_que_desejar_db
+DB_DATABASE=name_you_want_db
 DB_USERNAME=root
 DB_PASSWORD=root
 
@@ -50,29 +36,29 @@ REDIS_PORT=6379
 ```
 
 
-Suba os containers do projeto
+Up containers
 ```sh
 docker-compose up -d
 ```
 
 
-Acessar o container
+Access the container
 ```sh
-docker-compose exec curso_x bash
+docker-compose exec laravel_8 bash
 ```
 
 
-Instalar as dependências do projeto
+Install project dependencies
 ```sh
 composer install
 ```
 
 
-Gerar a key do projeto Laravel
+Generate the Laravel project key
 ```sh
 php artisan key:generate
 ```
 
 
-Acessar o projeto
-[http://localhost:8989](http://localhost:8989)
+Access the project
+[http://localhost:8080](http://localhost:8080)
