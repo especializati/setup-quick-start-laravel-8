@@ -7,9 +7,13 @@ Clone this Repository
 git clone https://github.com/especializati/quick-start-laravel-8-and-adminlte4.git my-project
 ```
 
-Create the .env file
 ```sh
 cd my-project/
+git checkout laravel-8-with-adminlte3
+```
+
+Create the .env file
+```sh
 cp .env.example .env
 ```
 
